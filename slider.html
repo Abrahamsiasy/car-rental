@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .boooo {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #0f2027;
+            background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+            overflow: hidden;
+        }
+
+        .scopee {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            animation: slid 30s linear infinite;
+        }
+
+        .scopee span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-origin: center;
+            transform-style: preserve-3d;
+            transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+        }
+
+        .scopee span img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: 2s;
+        }
+
+        .scopee span:hover img {
+            transform: translateY(-50px) scale(1.7);
+        }
+
+        @keyframes slid {
+            0% {
+                transform: perspective(1000px) rotateY(0deg);
+            }
+
+            100% {
+                transform: perspective(1000px) rotateY(360deg);
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="boooo">
+        <div class="scopee"><span style="--i:1;"><img src="./seare/image30-35.jpg" alt="not found"></span><span
+                style="--i:2;"><img src="./seare/image31-20.jpg" alt="not found"></span><span style="--i:3;"><img
+                    src="./seare/image37-45.jpg" alt="not found"></span><span style="--i:4;"><img
+                    src="./seare/image37-57.jpg" alt="not found"></span><span style="--i:5;"><img
+                    src="./seare/image38-08.jpg" alt="not found"></span><span style="--i:6;"><img
+                    src="./seare/image38-17.jpg" alt="not found"></span><span style="--i:7;"><img
+                    src="./seare/image38-25.jpg" alt="not found"></span><span style="--i:8;"><img
+                    src="./seare/image38-31.jpg" alt="not found"></span><span style="--i:9;"><img
+                    src="./seare/image38-37.jpg" alt="not found"></span><span style="--i:10;"><img
+                    src="./seare/image38-44.jpg" alt="not found"></span><span style="--i:11;"><img
+                    src="./seare/image38-52.jpg" alt="not found"></span>
+        </div>
+    </div>
+
+</body>
+
+</html>
